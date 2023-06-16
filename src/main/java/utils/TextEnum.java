@@ -7,7 +7,6 @@ public enum TextEnum {
     LOG_FILE_FORMAT("logs/%s/%s.log"),
     GENERATE_LOG_FORMAT("%s %s (for table %s)"),
     LOG_PATTERN("[%d] %-8p (%-25c): %m%n"),
-    JAVA_FILE_PATTERN("%s%s%s"),
     EMAIL_PATTERN("%s.%s@%s"),
     SAVE_OR_UPDATE_PATTERN("    void saveOrUpdate(%s %s);%n"),
     GET_CLASS_PATTERN("    %s get%s(int id);%n"),

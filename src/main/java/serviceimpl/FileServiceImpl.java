@@ -54,10 +54,7 @@ public class FileServiceImpl implements FileService {
                 log.error(String.format(TextEnum.DIRS_NOT_CREATED.getText(), filePath));
             }
         }
-        File file = new File(String.format(TextEnum.JAVA_FILE_PATTERN.getText(),
-                filePath,
-                fileName,
-                TextEnum.JAVA_SUFFIX.getText()));
+        File file = new File(filePath + fileName);
         if (!file.exists()) {
             try {
                 boolean success = file.createNewFile();
