@@ -44,7 +44,7 @@ public class JPACreator {
                 TextEnum.UNDERSCORE_MARK.getText() +
                 JPAType.ENTITY.getTitle();
         fileService.createAndFillJavaFile(
-                TextFormat.capitalizeOrCamelCaseText(fileName, false),
+                TextFormat.capitalizeOrCamelCaseText(fileName, false) + TextEnum.JAVA_SUFFIX.getText(),
                 JPAType.ENTITY.getPath(),
                 classDefinition);
     }
@@ -52,7 +52,8 @@ public class JPACreator {
     public void generateDtoFiles(ValidatedColumns validatedColumns) {
         String classDefinition = createClassDefinition(validatedColumns, JPAType.DTO);
         fileService.createAndFillJavaFile(
-                TextFormat.capitalizeOrCamelCaseText(validatedColumns.getTableName(), false),
+                TextFormat.capitalizeOrCamelCaseText(validatedColumns.getTableName(), false) +
+                        TextEnum.JAVA_SUFFIX.getText(),
                 JPAType.DTO.getPath(),
                 classDefinition);
     }
@@ -60,14 +61,14 @@ public class JPACreator {
     public void generateDaoFile(ValidatedColumns validatedColumns) {
         String classDefinition = createClassDefinition(validatedColumns, JPAType.DAO);
         String fileName = TextFormat.capitalizeOrCamelCaseText(validatedColumns.getTableName(), false) +
-                JPAType.DAO.getTitle();
+                JPAType.DAO.getTitle() + TextEnum.JAVA_SUFFIX.getText();
         fileService.createAndFillJavaFile(fileName, JPAType.DAO.getPath(), classDefinition);
     }
 
     public void generateDaoImplFile(ValidatedColumns validatedColumns) {
         String classDefinition = createClassDefinition(validatedColumns, JPAType.DAO_IMPL);
         String fileName = TextFormat.capitalizeOrCamelCaseText(validatedColumns.getTableName(), false) +
-                JPAType.DAO_IMPL.getTitle();
+                JPAType.DAO_IMPL.getTitle() + TextEnum.JAVA_SUFFIX.getText();
         fileService.createAndFillJavaFile(fileName, JPAType.DAO_IMPL.getPath(), classDefinition);
     }
 
@@ -76,7 +77,7 @@ public class JPACreator {
         validatedColumns.setDatabaseName(db);
         String classDefinition = createClassDefinition(validatedColumns, JPAType.ENTITY_MANAGER);
         fileService.createAndFillJavaFile(
-                JPAType.ENTITY_MANAGER.getTitle(),
+                JPAType.ENTITY_MANAGER.getTitle() + TextEnum.JAVA_SUFFIX.getText(),
                 JPAType.ENTITY_MANAGER.getPath(),
                 classDefinition);
     }
