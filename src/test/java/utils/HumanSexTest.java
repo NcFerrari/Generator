@@ -1,5 +1,6 @@
 package utils;
 
+import generator.utils.HumanSex;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

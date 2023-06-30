@@ -1,4 +1,4 @@
-package utils.jpa;
+package generator.utils.jpa;
 
 import lombok.Data;
 

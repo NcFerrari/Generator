@@ -1,18 +1,20 @@
+package generator;
+
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.NativeQuery;
-import service.FileService;
-import service.LoggerService;
-import serviceimpl.FileServiceImpl;
-import serviceimpl.LoggerServiceImpl;
-import utils.TextEnum;
-import utils.TextFormat;
-import utils.jpa.Column;
-import utils.jpa.DataTypeEnum;
-import utils.jpa.JPAType;
-import utils.jpa.ValidatedColumns;
+import generator.service.FileService;
+import generator.service.LoggerService;
+import generator.serviceimpl.FileServiceImpl;
+import generator.serviceimpl.LoggerServiceImpl;
+import generator.utils.TextEnum;
+import generator.utils.TextFormat;
+import generator.utils.jpa.Column;
+import generator.utils.jpa.DataTypeEnum;
+import generator.utils.jpa.JPAType;
+import generator.utils.jpa.ValidatedColumns;
 
 import java.util.HashMap;
 import java.util.List;

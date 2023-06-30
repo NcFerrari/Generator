@@ -1,4 +1,4 @@
-package service;
+package generator.service;
 
 import org.apache.log4j.Logger;
 

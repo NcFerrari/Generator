@@ -6,7 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>Generators</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.2</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -390,7 +390,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>JPACreator</mainClass>
+                            <mainClass>generator.JPACreator</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

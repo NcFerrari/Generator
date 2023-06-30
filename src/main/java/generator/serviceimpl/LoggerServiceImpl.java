@@ -1,10 +1,10 @@
-package serviceimpl;
+package generator.serviceimpl;
 
 import org.apache.log4j.DailyRollingFileAppender;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
-import service.LoggerService;
-import utils.TextEnum;
+import generator.service.LoggerService;
+import generator.utils.TextEnum;
 
 import java.io.IOException;
 import java.time.LocalDate;

@@ -1,4 +1,4 @@
-package service;
+package generator.service;
 
 import java.io.InputStream;
 import java.util.List;

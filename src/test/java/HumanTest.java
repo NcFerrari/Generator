@@ -1,7 +1,8 @@
+import generator.Human;
 import org.junit.jupiter.api.Test;
-import utils.HumanAtr;
-import utils.HumanSex;
-import utils.TextFormat;
+import generator.utils.HumanAtr;
+import generator.utils.HumanSex;
+import generator.utils.TextFormat;
 
 import java.time.LocalDate;
 import java.time.Period;

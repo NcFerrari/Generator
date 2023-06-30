@@ -1,13 +1,13 @@
-package utils.jpa;
+package generator.utils.jpa;
 
+import generator.utils.TextEnum;
+import generator.utils.TextFormat;
 import lombok.Getter;
 import org.apache.log4j.Logger;
-import service.FileService;
-import service.LoggerService;
-import serviceimpl.FileServiceImpl;
-import serviceimpl.LoggerServiceImpl;
-import utils.TextEnum;
-import utils.TextFormat;
+import generator.service.FileService;
+import generator.service.LoggerService;
+import generator.serviceimpl.FileServiceImpl;
+import generator.serviceimpl.LoggerServiceImpl;
 
 import java.util.ArrayList;
 import java.util.List;

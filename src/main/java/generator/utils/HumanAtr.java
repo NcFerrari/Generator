@@ -1,4 +1,4 @@
-package utils;
+package generator.utils;
 
 public enum HumanAtr {
     ALL,

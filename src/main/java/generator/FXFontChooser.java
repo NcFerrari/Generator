@@ -1,3 +1,5 @@
+package generator;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -7,6 +9,10 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+/**
+ * start it with VM options
+ * --module-path "libs\javafx-sdk-11.0.2\lib" --add-modules javafx.controls
+ */
 public class FXFontChooser extends Application {
 
     @Override
@@ -27,9 +33,5 @@ public class FXFontChooser extends Application {
         scrollPane.setContent(vbox);
         pane.getChildren().add(scrollPane);
         scrollPane.setPrefSize(1000, 500);
-    }
-
-    public static void main(String[] args) {
-        launch();
     }
 }

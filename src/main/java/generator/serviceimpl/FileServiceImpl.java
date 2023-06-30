@@ -1,9 +1,9 @@
-package serviceimpl;
+package generator.serviceimpl;
 
 import org.apache.log4j.Logger;
-import service.FileService;
-import service.LoggerService;
-import utils.TextEnum;
+import generator.service.FileService;
+import generator.service.LoggerService;
+import generator.utils.TextEnum;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

@@ -1,7 +1,7 @@
-package utils;
+package generator.utils;
 
-import service.FileService;
-import serviceimpl.FileServiceImpl;
+import generator.service.FileService;
+import generator.serviceimpl.FileServiceImpl;
 
 import java.util.Random;
 

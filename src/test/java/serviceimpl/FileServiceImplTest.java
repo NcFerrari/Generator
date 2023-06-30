@@ -1,8 +1,9 @@
 package serviceimpl;
 
+import generator.serviceimpl.FileServiceImpl;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import service.FileService;
+import generator.service.FileService;
 
 import java.util.Arrays;
 

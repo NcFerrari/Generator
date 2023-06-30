@@ -1,9 +1,10 @@
 package serviceimpl;
 
+import generator.serviceimpl.LoggerServiceImpl;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Test;
-import service.LoggerService;
+import generator.service.LoggerService;
 
 class LoggerServiceImplTest {
 

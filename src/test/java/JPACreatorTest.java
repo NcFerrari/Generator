@@ -1,7 +1,8 @@
+import generator.JPACreator;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Test;
-import service.LoggerService;
-import serviceimpl.LoggerServiceImpl;
+import generator.service.LoggerService;
+import generator.serviceimpl.LoggerServiceImpl;
 
 class JPACreatorTest {
     private final LoggerService loggerService = LoggerServiceImpl.getInstance(JPACreatorTest.class);

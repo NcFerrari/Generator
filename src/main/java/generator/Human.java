@@ -1,9 +1,11 @@
-import service.FileService;
-import serviceimpl.FileServiceImpl;
-import utils.HumanAtr;
-import utils.HumanSex;
-import utils.TextEnum;
-import utils.TextFormat;
+package generator;
+
+import generator.service.FileService;
+import generator.serviceimpl.FileServiceImpl;
+import generator.utils.HumanAtr;
+import generator.utils.HumanSex;
+import generator.utils.TextEnum;
+import generator.utils.TextFormat;
 
 import java.time.LocalDate;
 import java.time.Period;
