@@ -138,7 +138,11 @@ public enum TextEnum {
     DTO_TO_ENTITY_IF("        if (dto == null) {"),
     DTO_TO_ENTITY_NEW_ENTITY("        %s%s entity = new %s%s();"),
     DTO_TO_ENTITY_SET("        entity.set%s%s(dto.get%s());"),
-    DTO_TO_ENTITY_RETURN("        return entity;");
+    DTO_TO_ENTITY_RETURN("        return entity;"),
+    SQL_SELECT_FROM_IS("" +
+            "SELECT TABLE_NAME, COLUMN_NAME, COLUMN_TYPE, COLUMN_KEY " +
+            "FROM INFORMATION_SCHEMA.COLUMNS " +
+            "WHERE TABLE_SCHEMA=:db");
 
     private final String text;
 

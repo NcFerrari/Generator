@@ -19,6 +19,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+ * Use it by calling cunstructor with parametr (database schema name);
+ */
 public class JPACreator {
 
     private static final String CONFIG_FILE = TextEnum.HIBERNATE_CONFIG_FILE.getText();
@@ -82,19 +85,12 @@ public class JPACreator {
                 classDefinition);
     }
 
-    public static void main(String[] args) {
-        new JPACreator("bf2stats");
-    }
-
     private List<Object[]> loadTableStructure(String db) {
         SessionFactory factory = new Configuration().configure(CONFIG_FILE).buildSessionFactory();
         Session session = factory.getCurrentSession();
         session.beginTransaction();
         @SuppressWarnings("unchecked")
-        NativeQuery<Object[]> query = session.createNativeQuery("" +
-                "SELECT TABLE_NAME, COLUMN_NAME, COLUMN_TYPE, COLUMN_KEY " +
-                "FROM INFORMATION_SCHEMA.COLUMNS " +
-                "WHERE TABLE_SCHEMA=:db");
+        NativeQuery<Object[]> query = session.createNativeQuery(TextEnum.SQL_SELECT_FROM_IS.getText());
         query.setParameter(TextEnum.SQL_DB_PARAMETER.getText(), db);
         List<Object[]> list = query.getResultList();
         session.getTransaction().commit();
