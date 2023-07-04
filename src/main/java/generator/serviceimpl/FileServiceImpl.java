@@ -77,6 +77,9 @@ public class FileServiceImpl implements FileService {
     public List<String> getFileNames(String path) {
         List<String> resultList = new ArrayList<>();
         File dir = new File(path);
+        if (!dir.exists()) {
+            return new ArrayList<>();
+        }
         for (File file : Objects.requireNonNull(dir.listFiles())) {
             resultList.add(file.getName());
         }

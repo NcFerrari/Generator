@@ -85,10 +85,13 @@ public enum JPAType {
                 imports.add(TextEnum.IMPORT_LIST.getText());
                 break;
             case ENTITY_MANAGER:
+                imports.add(TextEnum.IMPORT_LOGGER_SERVICE.getText());
+                imports.add(TextEnum.IMPORT_LOGGER_SERVICE_IMPL.getText());
                 imports.add(TextEnum.IMPORT_ALL_ENTITIES.getText());
                 imports.add(TextEnum.IMPORT_SESSION.getText());
                 imports.add(TextEnum.IMPORT_SESSION_FACTORY.getText());
-                imports.add(TextEnum.IMPORT_CONFIGURATION.getText());
+                imports.add(TextEnum.IMPORT_CONFIGURATION.getText() + TextEnum.NEW_LINE_MARK.getText());
+                imports.add(TextEnum.IMPORT_OBJECTS.getText());
                 break;
             default:
         }
@@ -183,6 +186,11 @@ public enum JPAType {
 
                 lines.add(TextEnum.ANNOTATION_OVERRIDE.getText());
                 lines.add(String.format(TextEnum.GET_DEFINITION_HEAD.getText(), className, className));
+                lines.add(TextEnum.IF_DEFINITION.getText());
+                lines.add(TextEnum.TAB_SPACE.getText() + TextEnum.TAB_SPACE.getText() +
+                        TextEnum.TAB_SPACE.getText() + TextEnum.RETURN_NULL.getText());
+                lines.add(TextEnum.TAB_SPACE.getText() + TextEnum.TAB_SPACE.getText() +
+                        TextEnum.CURLY_END_BRACKET.getText());
                 lines.add(TextEnum.DEFINITION_BEGIN_TRANSACTION.getText());
                 lines.add(String.format(TextEnum.GET_DEFINITION_GET.getText(),
                         className, ENTITY.getTitle(), className, ENTITY.getTitle()));
@@ -194,6 +202,11 @@ public enum JPAType {
 
                 lines.add(TextEnum.ANNOTATION_OVERRIDE.getText());
                 lines.add(String.format(TextEnum.GET_ALL_DEFINITION_HEAD.getText(), className, className));
+                lines.add(TextEnum.IF_DEFINITION.getText());
+                lines.add(TextEnum.TAB_SPACE.getText() + TextEnum.TAB_SPACE.getText() +
+                        TextEnum.TAB_SPACE.getText() + TextEnum.RETURN_EMPTY_LIST.getText());
+                lines.add(TextEnum.TAB_SPACE.getText() + TextEnum.TAB_SPACE.getText() +
+                        TextEnum.CURLY_END_BRACKET.getText());
                 lines.add(TextEnum.DEFINITION_BEGIN_TRANSACTION.getText());
                 lines.add(TextEnum.SUPPRESS_WARNINGS.getText());
                 lines.add(String.format(TextEnum.GET_ALL_DEFINITION_QUERY.getText(),
@@ -223,6 +236,11 @@ public enum JPAType {
 
                 lines.add(TextEnum.ANNOTATION_OVERRIDE.getText());
                 lines.add(String.format(TextEnum.DELETE_DEFINITION_BY_ID_HEAD.getText(), className));
+                lines.add(TextEnum.IF_DEFINITION.getText());
+                lines.add(TextEnum.TAB_SPACE.getText() + TextEnum.TAB_SPACE.getText() +
+                        TextEnum.TAB_SPACE.getText() + TextEnum.RETURN.getText());
+                lines.add(TextEnum.TAB_SPACE.getText() + TextEnum.TAB_SPACE.getText() +
+                        TextEnum.CURLY_END_BRACKET.getText());
                 lines.add(TextEnum.DEFINITION_BEGIN_TRANSACTION.getText());
                 lines.add(String.format(TextEnum.DELETE_DEFINITION_BY_ID_QUERY.getText(),
                         TextEnum.TAB_SPACE.getText() + TextEnum.TAB_SPACE.getText(),
@@ -271,15 +289,20 @@ public enum JPAType {
                 lines.add(TextEnum.ATTRIBUTE_SESSION.getText());
                 lines.add(TextEnum.EMPTY_MARK.getText());
                 lines.add(String.format(TextEnum.PROTECTED_CONSTRUCTOR.getText(), getTitle()));
+                lines.add(TextEnum.TRY_BLOCK.getText());
                 lines.add(TextEnum.FACTORY_INIT.getText());
                 lines.add(String.format(TextEnum.SETTING_CONFIGURE.getText(),
                         TextEnum.HIBERNATE_CONFIG_FILE.getText()));
                 lines.add(String.format(TextEnum.HIBERNATE_DATABASE_PROPERTY.getText(),
                         TextEnum.TAB_SPACE.getText() + TextEnum.TAB_SPACE.getText(),
                         TextEnum.TAB_SPACE.getText() + TextEnum.TAB_SPACE.getText(),
-                        validatedColumns.getDatabaseName()));
+                        TextEnum.TAB_SPACE.getText(), validatedColumns.getDatabaseName()));
                 addAnnotatedClasses(lines);
                 lines.add(TextEnum.BUILD_SESSION_FACTORY.getText());
+                lines.add(TextEnum.CATCH_BLOCK.getText());
+                lines.add(String.format(TextEnum.LOGGER_SERVICE_INIT.getText(), ENTITY_MANAGER.getTitle()));
+                lines.add(String.format(TextEnum.LOGGER_SERVICE_LOG.getText(), TextEnum.CANNOT_LOG_DB_TEXT.getText()));
+                lines.add(TextEnum.CLOSE_CATCH_BLOCK.getText());
                 lines.add(TextEnum.TAB_SPACE.getText() + TextEnum.CURLY_END_BRACKET.getText());
                 lines.add(TextEnum.EMPTY_MARK.getText());
                 lines.add(TextEnum.SESSION_METHOD_HEAD.getText());

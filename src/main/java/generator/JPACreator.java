@@ -1,10 +1,5 @@
 package generator;
 
-import org.apache.log4j.Logger;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import org.hibernate.query.NativeQuery;
 import generator.service.FileService;
 import generator.service.LoggerService;
 import generator.serviceimpl.FileServiceImpl;
@@ -15,7 +10,13 @@ import generator.utils.jpa.Column;
 import generator.utils.jpa.DataTypeEnum;
 import generator.utils.jpa.JPAType;
 import generator.utils.jpa.ValidatedColumns;
+import org.apache.log4j.Logger;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.query.NativeQuery;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -88,7 +89,12 @@ public class JPACreator {
     }
 
     private List<Object[]> loadTableStructure(String db) {
-        SessionFactory factory = new Configuration().configure(CONFIG_FILE).buildSessionFactory();
+        SessionFactory factory;
+        try {
+            factory = new Configuration().configure(CONFIG_FILE).buildSessionFactory();
+        } catch (Exception exp) {
+            return new ArrayList<>();
+        }
         Session session = factory.getCurrentSession();
         session.beginTransaction();
         @SuppressWarnings("unchecked")
