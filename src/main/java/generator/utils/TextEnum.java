@@ -117,7 +117,6 @@ public enum TextEnum {
     DEFINITION_BEGIN_TRANSACTION("        getSession().beginTransaction();"),
     SAVE_OR_UPDATE_DEFINITION_SAVE_OR_UPDATE("        getSession().saveOrUpdate(mapDtoToEntity(%s));"),
     DEFINITION_COMMIT("        getSession().getTransaction().commit();"),
-    DEFINITION_CLOSE("        getSession().close();"),
     GET_DEFINITION_HEAD("    public %s get%s(int id) {"),
     IF_DEFINITION("        if (getSession() == null) {"),
     GET_DEFINITION_GET("        %s%s entity = getSession().get(%s%s.class, id);"),

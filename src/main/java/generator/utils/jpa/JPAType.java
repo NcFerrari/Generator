@@ -180,7 +180,6 @@ public enum JPAType {
                 lines.add(TextEnum.DEFINITION_BEGIN_TRANSACTION.getText());
                 lines.add(String.format(TextEnum.SAVE_OR_UPDATE_DEFINITION_SAVE_OR_UPDATE.getText(), attributeName));
                 lines.add(TextEnum.DEFINITION_COMMIT.getText());
-                lines.add(TextEnum.DEFINITION_CLOSE.getText());
                 lines.add(TextEnum.TAB_SPACE.getText() + TextEnum.CURLY_END_BRACKET.getText());
                 lines.add(TextEnum.EMPTY_MARK.getText());
 
@@ -195,7 +194,6 @@ public enum JPAType {
                 lines.add(String.format(TextEnum.GET_DEFINITION_GET.getText(),
                         className, ENTITY.getTitle(), className, ENTITY.getTitle()));
                 lines.add(TextEnum.DEFINITION_COMMIT.getText());
-                lines.add(TextEnum.DEFINITION_CLOSE.getText());
                 lines.add(TextEnum.GET_DEFINITION_MAP_TO_DTO.getText());
                 lines.add(TextEnum.TAB_SPACE.getText() + TextEnum.CURLY_END_BRACKET.getText());
                 lines.add(TextEnum.EMPTY_MARK.getText());
@@ -212,7 +210,6 @@ public enum JPAType {
                 lines.add(String.format(TextEnum.GET_ALL_DEFINITION_QUERY.getText(),
                         className, ENTITY.getTitle(), className, ENTITY.getTitle()));
                 lines.add(TextEnum.DEFINITION_COMMIT.getText());
-                lines.add(TextEnum.DEFINITION_CLOSE.getText());
                 lines.add(String.format(TextEnum.GET_ALL_DEFINITION_NEW_LIST.getText(), className));
                 lines.add(TextEnum.GET_ALL_DEFINITION_FOR_EACH.getText());
                 lines.add(TextEnum.GET_ALL_DEFINITION_RETURN.getText());
@@ -230,7 +227,6 @@ public enum JPAType {
                 lines.add(TextEnum.DEFINITION_BEGIN_TRANSACTION.getText());
                 lines.add(String.format(TextEnum.DELETE_DEFINITION_DELETE.getText(), attributeName));
                 lines.add(TextEnum.DEFINITION_COMMIT.getText());
-                lines.add(TextEnum.DEFINITION_CLOSE.getText());
                 lines.add(TextEnum.TAB_SPACE.getText() + TextEnum.CURLY_END_BRACKET.getText());
                 lines.add(TextEnum.EMPTY_MARK.getText());
 
@@ -248,7 +244,6 @@ public enum JPAType {
                 lines.add(TextEnum.DELETE_DEFINITION_BY_ID_PARAMETER.getText());
                 lines.add(TextEnum.DELETE_DEFINITION_BY_ID_EXECUTE_UPDATE.getText());
                 lines.add(TextEnum.DEFINITION_COMMIT.getText());
-                lines.add(TextEnum.DEFINITION_CLOSE.getText());
                 lines.add(TextEnum.TAB_SPACE.getText() + TextEnum.CURLY_END_BRACKET.getText());
                 lines.add(TextEnum.EMPTY_MARK.getText());
 
