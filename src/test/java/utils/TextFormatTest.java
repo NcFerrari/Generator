@@ -33,7 +33,7 @@ class TextFormatTest {
                 result.append(withoutDiacritic.charAt(i));
             }
         }
-        assertEquals(result.toString(), correctResult);
+        assertEquals(correctResult, result.toString());
 
         assertEquals("Ř", TextFormat.addDiacriticToLetter('R'));
         assertNotEquals("í", TextFormat.addDiacriticToLetter('x'));
