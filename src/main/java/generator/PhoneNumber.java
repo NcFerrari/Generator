@@ -32,4 +32,7 @@ public class PhoneNumber {
     public static String generateStandardPhoneNumber() {
         return generateStandardPhoneNumber(false);
     }
+
+    private PhoneNumber() {
+    }
 }
