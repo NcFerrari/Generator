@@ -10,7 +10,7 @@ import generator.utils.jpa.Column;
 import generator.utils.jpa.DataTypeEnum;
 import generator.utils.jpa.JPAType;
 import generator.utils.jpa.ValidatedColumns;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

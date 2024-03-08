@@ -1,8 +1,8 @@
 package serviceimpl;
 
 import generator.serviceimpl.LoggerServiceImpl;
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.junit.jupiter.api.Test;
 import generator.service.LoggerService;
 
@@ -13,15 +13,15 @@ class LoggerServiceImplTest {
 
     @Test
     void getLog() {
-        Logger.getRootLogger().setLevel(Level.TRACE);
+        LogManager.getRootLogger().atTrace();
         logging();
-        Logger.getRootLogger().setLevel(Level.DEBUG);
+        LogManager.getRootLogger().atDebug();
         logging();
-        Logger.getRootLogger().setLevel(Level.INFO);
+        LogManager.getRootLogger().atInfo();
         logging();
-        Logger.getRootLogger().setLevel(Level.WARN);
+        LogManager.getRootLogger().atWarn();
         logging();
-        Logger.getRootLogger().setLevel(Level.ERROR);
+        LogManager.getRootLogger().atError();
         logging();
     }
 

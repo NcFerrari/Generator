@@ -3,7 +3,7 @@ package generator;
 import generator.service.LoggerService;
 import generator.serviceimpl.LoggerServiceImpl;
 import generator.utils.TextEnum;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Random;
 

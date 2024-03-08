@@ -1,6 +1,6 @@
 package generator.service;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 
 public interface LoggerService {
     Logger getLog();

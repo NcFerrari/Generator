@@ -1,0 +1,39 @@
+#ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL < OFF
+Configuration:
+  Properties:
+    Property:
+      name: "log-path"
+      value: logs
+  status: INFO
+  Appenders:
+    Console:
+      name: Console
+      target: SYSTEM_OUT
+      PatternLayout:
+        pattern: "[%d] %-8p (%-50c) : %m%n"
+    RollingFile:
+      name: SaveToFile
+      filePattern: "${log-path}/%d{yyyy-MM-dd}/%d{HH}.log"
+      PatternLayout:
+        pattern: "[%d] %-8p (%-50c) : %m%n"
+      Policies:
+        SizeBasedTriggeringPolicy:
+          size: "5 MB"
+  #    File:
+  #      name: SaveToFile
+  #      fileName: logs/app.log
+  #      PatternLayout:
+  #        pattern: "[%d] %-8p (%-50c) : %m%n"
+  Loggers:
+    Root:
+      level: INFO
+      AppenderRef:
+        - ref: Console
+        - ref: SaveToFile
+
+
+#%m = text, ktery se zobrazi z parametru
+#%n = odradkovaani
+#%c = trida, ktera dotycnou zpravu vyvolala
+#%p = nazev metody, ktera se volala (info, debug, atd.)
+#-8 = pozice, od ktere se bude zacinat (tabulatorove zarovnani)

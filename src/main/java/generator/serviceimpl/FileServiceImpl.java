@@ -1,6 +1,6 @@
 package generator.serviceimpl;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 import generator.service.FileService;
 import generator.service.LoggerService;
 import generator.utils.TextEnum;

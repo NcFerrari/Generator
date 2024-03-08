@@ -1,44 +1,48 @@
 package generator.serviceimpl;
 
-import org.apache.log4j.DailyRollingFileAppender;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PatternLayout;
 import generator.service.LoggerService;
-import generator.utils.TextEnum;
-
-import java.io.IOException;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class LoggerServiceImpl implements LoggerService {
 
     private static LoggerService loggerService;
     private static Logger log;
 
+    /**
+     * Singleton basic method
+     *
+     * @param classLogging Class from which one this method is called. Don't forget .class suffix
+     * @return LoggerServiceImpl what is object of this interface
+     */
     public static <T> LoggerService getInstance(Class<T> classLogging) {
         if (loggerService == null) {
             loggerService = new LoggerServiceImpl();
-            String dailyFolder = LocalDate.now().format(DateTimeFormatter.ofPattern(TextEnum.DATE_FORMAT.getText()));
-            String time = LocalDateTime.now().format(DateTimeFormatter.ofPattern(TextEnum.HOUR_FORMAT.getText()));
-            DailyRollingFileAppender daily = null;
-            try {
-                daily = new DailyRollingFileAppender(
-                        new PatternLayout(TextEnum.LOG_PATTERN.getText()),
-                        String.format(TextEnum.LOG_FILE_FORMAT.getText(), dailyFolder, time),
-                        TextEnum.DATE_FORMAT.getText());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Logger.getRootLogger().addAppender(daily);
         }
-        log = Logger.getLogger(classLogging);
+
+        log = LogManager.getLogger(classLogging);
         return loggerService;
     }
 
+    /**
+     * Singleton basic implementation
+     */
     private LoggerServiceImpl() {
     }
 
+    /**
+     * For logging, you can use methods like:
+     * <ul>
+     *     <li>trace()</li>
+     *     <li>debug()</li>
+     *     <li>info()</li>
+     *     <li>warn()</li>
+     *     <li>error()</li>
+     *     <li>fatal()</li>
+     * </ul>
+     *
+     * @return Logger for print message into output
+     */
     @Override
     public Logger getLog() {
         return log;

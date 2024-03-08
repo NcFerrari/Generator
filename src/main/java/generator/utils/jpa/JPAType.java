@@ -3,7 +3,7 @@ package generator.utils.jpa;
 import generator.utils.TextEnum;
 import generator.utils.TextFormat;
 import lombok.Getter;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 import generator.service.FileService;
 import generator.service.LoggerService;
 import generator.serviceimpl.FileServiceImpl;

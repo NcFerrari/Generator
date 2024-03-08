@@ -1,5 +1,5 @@
 import generator.JPACreator;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
 import generator.service.LoggerService;
 import generator.serviceimpl.LoggerServiceImpl;
